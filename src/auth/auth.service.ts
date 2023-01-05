@@ -25,10 +25,8 @@ private client: ClientProxy
 
   async validateUser(username: string, password: string): Promise<any> {
     
-
-    const user = this.client.send('auth/login', {username,password}).pipe()
+  const user = this.client.send('auth/login', {username,password}).pipe()
    const result = await firstValueFrom(user);
-   console.log("result", result)
 
    if (result && result.password === password) {
     const { password, ...user } = result;
@@ -38,7 +36,6 @@ private client: ClientProxy
   }
 
   async login(user: any) {
-    console.log("pay;load", user)
     const payload = { username: user.email, sub: user.id, role: user.role};
 
     return {

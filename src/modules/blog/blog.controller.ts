@@ -19,8 +19,7 @@ export class BlogController {
     @Post('create-blog')
     @HttpCode(200)
     @UsePipes(ValidationPipe) 
-    async postBlogs( @Body() blogData: createBlogDto, @Request() req) {
-        console.log("blog req.user", req.user.userId)
-        return await this.blogService.createNewBlog(blogData);
+    async postBlogs( @Body() blogData, @Request() req) {
+        return await this.blogService.createNewBlog({...blogData, userId: req.user.userId});
     }
 }

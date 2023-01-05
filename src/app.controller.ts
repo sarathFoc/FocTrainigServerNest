@@ -36,42 +36,36 @@ export class AppController {
   @Get('/fetchLoginPage')
   getLoginPageData(): any {
     const data = this.appService.getLoginPageData();
-    console.log("data")
     return data 
   }
 
   @Get('/signUpPage')
   getSignUpPageData(): any {
     const data = this.appService.getSignUpPageData();
-    console.log("data")
     return data 
   }
 
   @Get('/blogPage')
   getBlogPageData(): any {
     const data = this.appService.getBlogPageData();
-    console.log("data")
     return data 
   }
 
   @Get('/blogModal')
   getBlogModalData(): any {
     const data = this.appService.getBlogModalData();
-    console.log("data")
     return data 
   }
 
   @Get('/logInPage')
   getLogInPageData(): any {
     const data = this.appService.getLogInPageData();
-    console.log("data")
     return data 
   }
 
   @Get('/blogHeader')
   getBlogHeaderData(): any {
     const data = this.appService.getBlogHeaderData();
-    console.log("data")
     return data 
   }
 

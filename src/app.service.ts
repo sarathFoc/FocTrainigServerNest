@@ -46,7 +46,6 @@ export class AppService {
 
   // public  getBlogPageData () {
   //   const data = this.client.send('getBlogPageData', 'getBlogPageData').pipe()
-  //   console.log("data", data)
   //   return data;
   // }
 
